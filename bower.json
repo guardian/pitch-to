@@ -1,0 +1,12 @@
+{
+  "name": "Pitch",
+  "version": "0.0.0",
+  "authors": [
+    "Zef <zef.cherry-kynaston.casual@theguardian.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "pasteup-palette": "~3.4.2",
+    "guss-grid-system": "~1.2.1"
+  }
+}

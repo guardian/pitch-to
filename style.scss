@@ -1,0 +1,257 @@
+@import 'bower_components/guss-grid-system/_grid-system.scss';
+@import 'bower_components/guss-colours/_colours.scss';
+@import 'bower_components/pasteup-palette/src/_palette.scss';
+@import 'fonts.scss';
+
+$guardian-brand: guss-colour(guardian-brand, $pasteup-palette);
+$event-yellow: guss-colour(multimedia-main-2, $pasteup-palette);
+$neutral-1: guss-colour(neutral-1, $pasteup-palette);
+$neutral-2: guss-colour(neutral-2, $pasteup-palette);
+$neutral-5: guss-colour(neutral-5, $pasteup-palette);
+$neutral-6: guss-colour(neutral-6, $pasteup-palette);
+$neutral-7: guss-colour(neutral-7, $pasteup-palette);
+$news-support-1: guss-colour(news-support-1, $pasteup-palette);
+
+body{
+	font-family: "Guardian Egyptian Text", Georgia,serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-size: 16px;
+}
+
+a{
+	color: $guardian-brand;
+	text-decoration: none;
+}
+
+/*Header and footer*/
+header {
+	background: $guardian-brand;
+	height: $gs-row-height * 3;
+
+	img {
+		width: $gs-column-width * 5;
+	}
+
+	@media screen and (max-width: 480px) {
+		height: $gs-row-height * 1.5;
+
+		img {
+			width: $gs-column-width * 3;
+		}
+	}
+}
+
+footer{
+	background: #10477a;
+	height: $gs-baseline * 4;
+
+	.wrapper {
+		background-color: #114b82;
+		height: $gs-baseline * 4;
+	}
+
+	p {
+		color: $news-support-1;
+		font-size: 14px;
+		line-height: $gs-baseline * 4;
+		float: left;
+	}
+
+	@media screen and (max-width: 480px) {
+		img {
+			display: none;
+		}
+	}
+}
+
+header img, footer img{
+	float: right;
+	margin-top: $gs-baseline;
+	line-height: $gs-baseline * 4;
+}
+
+/*Structure*/
+.wrapper {
+	width: gs-span(12);
+	margin: 0 auto;
+	padding: 0 $gs-gutter;
+
+	@media screen and (max-width: 1000px) {
+		width: gs-span(10);
+	}
+
+	@media screen and (max-width: 860px) {
+		width: gs-span(8);
+	}
+
+	@media screen and (max-width: 680px) {
+		width: inherit;
+		padding: 0 $gs-gutter/2;
+	}
+}
+
+.container {
+	width: 620px;
+	margin: 0 auto;
+	overflow: auto;
+
+	@media screen and (max-width: 680px) {
+		width: inherit;
+	}
+}
+
+/*Intro*/
+
+#intro{
+	color: #fff;
+	background: #1878a5;
+
+	.wrapper{
+		background: #197CAA;
+	}
+
+	h1{
+		font-family: "Guardian Egyptian Headline", Georgia,serif;
+		font-weight: 200;
+		font-size: 72px;
+		line-height: 1em;
+		padding: $gs-baseline * 3 0 $gs-baseline * 2 0;
+	}
+
+	p{
+		padding: 0 0 $gs-baseline * 3 0;
+	}
+}
+
+/*Events*/
+
+#events{
+	color: $neutral-1;
+	background: $neutral-6;
+
+	.wrapper{
+		background: $neutral-7;
+	}
+
+	.container {
+		padding: $gs-baseline 0 $gs-baseline * 2;
+	}
+}
+
+.event {
+	border-top: solid 2px $event-yellow;
+	background: #fff;
+	padding: $gs-baseline $gs-gutter/2 $gs-baseline * 4;
+	margin-bottom: $gs-baseline;
+	position: relative;
+
+	h2{
+		font-family: "Guardian Egyptian Headline", Georgia,serif;
+		font-size: 32px;
+	}
+
+	.time {
+		font-family: "Guardian Agate Sans", Helvetica,Arial,"Lucida Grande",sans-serif;
+		font-size: 14px;
+		color: $neutral-2;
+		margin-bottom: $gs-baseline / 2;
+
+		svg {
+			margin-bottom: -2px;
+		}
+	}
+
+	p.description {
+		font-size: 16px;
+	}
+}
+
+/*Details*/
+
+#details{
+	color: $neutral-1;
+	background: $neutral-5;
+
+	.wrapper{
+		background: $neutral-6;
+	}
+
+	.container {
+		padding: $gs-baseline 0 $gs-baseline * 4 0;
+	}
+
+	.column {
+		width: $gs-column-width * 5;
+		float: left;
+
+		&:first-of-type {
+			margin-right: $gs-gutter;
+		}
+	}
+}
+
+/*Buttons*/
+
+.button {
+	font-family: "Guardian Agate Sans", Helvetica,Arial,"Lucida Grande",sans-serif;
+	display: inline-block;
+    vertical-align: top;
+    width: auto;
+    text-decoration: none;
+    -webkit-border-radius: 62.5rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 $gs-gutter/2 0 $gs-gutter;
+    margin-right: 0.625rem;
+}
+
+.button--register{
+	position: absolute;
+	bottom: $gs-baseline / 2;
+	right: 0;
+	font-size: 16px;
+	height: 35px;
+	line-height: 35px;
+    color: $neutral-1;
+    background-color: $event-yellow;
+
+	&:hover {
+		background-color: darken($event-yellow, 6%);
+	}
+
+	svg {
+		display: inline-block;
+		margin: 0 0 -6px $gs-gutter/3;
+	}
+}
+
+/*Paragraphs*/
+
+p{
+	font-size: 22px;
+	line-height: 1.5em;
+	font-family: "Guardian Egyptian Text", Georgia,serif;
+
+	@media screen and (max-width: 480px) {
+		font-size: 18px;
+	}
+
+	strong {
+		font-weight: 500;
+	}
+
+	a {
+		border-bottom: 1px solid rgba($guardian-brand,0.3);
+		-webkit-transition: border .25s ease;
+		-moz-transition: border .25s ease;
+		-o-transition: border .25s ease;
+		transition: border .25s ease;
+
+		&:hover {
+			border-color: rgba($guardian-brand,0.9);
+		}
+	}
+}
