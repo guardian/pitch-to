@@ -167,6 +167,13 @@
   font-style: normal;
   font-stretch: normal; }
 @font-face {
+  font-family: "Guardian Egyptian Headline";
+  src: url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Medium.eot");
+  src: url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Medium.eot?#iefix") format("embedded-opentype"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Medium.woff") format("woff"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Medium.ttf") format("truetype"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Medium.svg#Guardian-Egyp-Web-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal; }
+@font-face {
   font-family: 'Guardian Agate Sans';
   src: url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Ag-Sans-1-Web-Reg.eot");
   src: url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Ag-Sans-1-Web-Reg.eot?#iefix") format("embedded-opentype"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Ag-Sans-1-Web-Reg.woff") format("woff"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Ag-Sans-1-Web-Reg.ttf") format("truetype"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Ag-Sans-1-Web-Reg.svg#Guardian-Text-Egyp-Web-Reg") format("svg");
@@ -248,10 +255,16 @@ header img, footer img {
     background: #197CAA; }
   #intro h1 {
     font-family: "Guardian Egyptian Headline", Georgia,serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: #ffbb00;
+    padding: 12px 0 0; }
+  #intro h2 {
+    font-family: "Guardian Egyptian Headline", Georgia,serif;
     font-weight: 200;
-    font-size: 72px;
-    line-height: 1em;
-    padding: 36px 0 24px 0; }
+    font-size: 40px;
+    line-height: 44px; }
   #intro p {
     padding: 0 0 36px 0; }
 
@@ -281,7 +294,8 @@ header img, footer img {
     .event .time svg {
       margin-bottom: -2px; }
   .event p.description {
-    font-size: 16px; }
+    font-size: 18px;
+    line-height: 1.5em; }
 
 /*Details*/
 #details {
@@ -328,12 +342,9 @@ header img, footer img {
 
 /*Paragraphs*/
 p {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.5em;
   font-family: "Guardian Egyptian Text", Georgia,serif; }
-  @media screen and (max-width: 480px) {
-    p {
-      font-size: 18px; } }
   p strong {
     font-weight: 500; }
   p a {
