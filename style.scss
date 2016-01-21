@@ -114,18 +114,25 @@ header img, footer img{
 
 	h1{
 		font-family: "Guardian Egyptian Headline", Georgia,serif;
-		font-weight: 500;
-		font-size: 20px;
-		line-height: 22px;
-		color: $event-yellow;
-		padding: $gs-baseline 0 0;
+		font-weight: 200;
+		font-size: 92px;
+		padding: $gs-baseline * 2 0 0;
 	}
 
 	h2 {
 		font-family: "Guardian Egyptian Headline", Georgia,serif;
-		font-weight: 200;
-		font-size: 40px;
-    	line-height: 44px;
+		font-size: 34px;
+    	line-height: 40px;
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: $gs-baseline / 2;
+			width: $gs-column-width * 3;
+			height: 2px;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
 	}
 
 	p{
@@ -164,7 +171,7 @@ header img, footer img{
 		font-family: "Guardian Agate Sans", Helvetica,Arial,"Lucida Grande",sans-serif;
 		font-size: 14px;
 		color: $neutral-2;
-		margin-bottom: $gs-baseline / 2;
+		margin-bottom: $gs-baseline;
 
 		svg {
 			margin-bottom: -2px;
