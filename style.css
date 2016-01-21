@@ -255,13 +255,13 @@ header img, footer img {
     background: #197CAA; }
   #intro h1 {
     font-family: "Guardian Egyptian Headline", Georgia,serif;
-    font-weight: 200;
     font-size: 92px;
     padding: 24px 0 0; }
   #intro h2 {
     font-family: "Guardian Egyptian Headline", Georgia,serif;
     font-size: 34px;
     line-height: 40px;
+    font-weight: 200;
     position: relative; }
     #intro h2:after {
       content: "";
