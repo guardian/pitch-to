@@ -146,13 +146,6 @@
   font-style: normal;
   font-stretch: normal; }
 @font-face {
-  font-family: "Guardian Egyptian Text";
-  src: url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Text-Egyp-Web-Med.eot");
-  src: url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Text-Egyp-Web-Med.eot?#iefix") format("embedded-opentype"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Text-Egyp-Web-Med.woff") format("woff"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Text-Egyp-Web-Med.ttf") format("truetype"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Text-Egyp-Web-Med.svg#Guardian-Text-Egyp-Web-Medium") format("svg");
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
   font-family: "Guardian Egyptian Headline";
   src: url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Regular.eot");
   src: url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Regular.eot?#iefix") format("embedded-opentype"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Regular.woff") format("woff"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Regular.ttf") format("truetype"), url("http://interactive.guim.co.uk/fonts/pasteup.guim.co.uk/fonts/latin1/Guardian-Egyp-Web-Regular.svg#Guardian-Egyp-Web-Regular") format("svg");
@@ -324,6 +317,8 @@ header img, footer img {
   width: auto;
   text-decoration: none;
   -webkit-border-radius: 62.5rem;
+  -moz-border-radius: 62.5rem;
+  border-radius: 62.5rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

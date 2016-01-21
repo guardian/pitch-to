@@ -217,6 +217,8 @@ header img, footer img{
     width: auto;
     text-decoration: none;
     -webkit-border-radius: 62.5rem;
+	-moz-border-radius: 62.5rem;
+	border-radius: 62.5rem; 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
