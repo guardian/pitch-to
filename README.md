@@ -8,7 +8,9 @@ A landing page for pitch-to
 
 ## to deploy
 
-This requires you to have commandline AWS credetials to the frontend account
+This requires you to have commandline AWS credetials to the frontend account.
+You can get these from [Janus](https://janus.gutools.co.uk/)
+
 `./deploy.sh`
 
 ##  dev helper
