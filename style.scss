@@ -32,6 +32,8 @@ header {
 
 	img {
 		width: $gs-column-width * 5;
+		float: right;
+		margin-top: $gs-baseline/2;
 	}
 
 	@media screen and (max-width: 480px) {
@@ -39,6 +41,7 @@ header {
 
 		img {
 			width: $gs-column-width * 3;
+			margin-top: $gs-baseline/4;
 		}
 	}
 }
@@ -59,17 +62,17 @@ footer{
 		float: left;
 	}
 
+	img{
+		float: right;
+		margin-top: $gs-baseline;
+		line-height: $gs-baseline * 4;
+	}
+
 	@media screen and (max-width: 480px) {
 		img {
 			display: none;
 		}
 	}
-}
-
-header img, footer img{
-	float: right;
-	margin-top: $gs-baseline;
-	line-height: $gs-baseline * 4;
 }
 
 /*Structure*/
@@ -218,7 +221,7 @@ header img, footer img{
     text-decoration: none;
     -webkit-border-radius: 62.5rem;
 	-moz-border-radius: 62.5rem;
-	border-radius: 62.5rem; 
+	border-radius: 62.5rem;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;

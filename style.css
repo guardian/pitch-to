@@ -189,12 +189,15 @@ header {
   background: #005689;
   height: 108px; }
   header img {
-    width: 300px; }
+    width: 300px;
+    float: right;
+    margin-top: 6px; }
   @media screen and (max-width: 480px) {
     header {
       height: 54px; }
       header img {
-        width: 180px; } }
+        width: 180px;
+        margin-top: 3px; } }
 
 footer {
   background: #10477a;
@@ -207,14 +210,13 @@ footer {
     font-size: 14px;
     line-height: 48px;
     float: left; }
+  footer img {
+    float: right;
+    margin-top: 12px;
+    line-height: 48px; }
   @media screen and (max-width: 480px) {
     footer img {
       display: none; } }
-
-header img, footer img {
-  float: right;
-  margin-top: 12px;
-  line-height: 48px; }
 
 /*Structure*/
 .wrapper {
