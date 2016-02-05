@@ -10,9 +10,8 @@ A landing page for pitch-to
 
 ## to deploy
 
-This requires you to have commandline AWS credetials to the frontend account.
-You can get these from [Janus](https://janus.gutools.co.uk/)
-
+This site uses [Github Pages](https://pages.github.com/)
+You can make changes as normal, but once you've committed and merged into master you need to also merge changes into the gh-pages branch. This can be done by running:
 `./deploy.sh`
 
 ##  dev helper
