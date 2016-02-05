@@ -192,7 +192,7 @@ header {
     width: 300px;
     float: right;
     margin-top: 6px; }
-  @media screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     header {
       height: 54px; }
       header img {
@@ -214,7 +214,7 @@ footer {
     float: right;
     margin-top: 12px;
     line-height: 48px; }
-  @media screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     footer img {
       display: none; } }
 
@@ -223,13 +223,13 @@ footer {
   width: 940px;
   margin: 0 auto;
   padding: 0 20px; }
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 1000px) {
     .wrapper {
       width: 780px; } }
-  @media screen and (max-width: 860px) {
+  @media (max-width: 860px) {
     .wrapper {
       width: 620px; } }
-  @media screen and (max-width: 680px) {
+  @media (max-width: 680px) {
     .wrapper {
       width: inherit;
       padding: 0 10px; } }
@@ -238,7 +238,7 @@ footer {
   width: 620px;
   margin: 0 auto;
   overflow: auto; }
-  @media screen and (max-width: 680px) {
+  @media (max-width: 680px) {
     .container {
       width: inherit; } }
 
@@ -255,7 +255,7 @@ footer {
   #intro h2 {
     font-family: "Guardian Egyptian Headline", Georgia,serif;
     font-size: 34px;
-    line-height: 40px;
+    line-height: 1.2em;
     font-weight: 200;
     position: relative; }
     #intro h2:after {
@@ -265,6 +265,11 @@ footer {
       width: 180px;
       height: 2px;
       background-color: rgba(255, 255, 255, 0.5); }
+  @media (max-width: 480px) {
+    #intro h1 {
+      font-size: 54px; }
+    #intro h2 {
+      font-size: 26px; } }
   #intro p {
     padding: 0 0 36px 0; }
 
@@ -293,9 +298,6 @@ footer {
     margin-bottom: 12px; }
     .event .time svg {
       margin-bottom: -2px; }
-  .event p.description {
-    font-size: 18px;
-    line-height: 1.5em; }
 
 /*Details*/
 #details {
@@ -308,6 +310,10 @@ footer {
   #details .column {
     width: 300px;
     float: left; }
+    @media (max-width: 680px) {
+      #details .column {
+        width: auto;
+        margin-bottom: 12px; } }
     #details .column:first-of-type {
       margin-right: 20px; }
 
@@ -347,6 +353,9 @@ p {
   font-size: 18px;
   line-height: 1.5em;
   font-family: "Guardian Egyptian Text", Georgia,serif; }
+  @media (max-width: 680px) {
+    p {
+      font-size: 16px; } }
   p strong {
     font-weight: 500; }
   p a {
@@ -357,3 +366,45 @@ p {
     transition: border .25s ease; }
     p a:hover {
       border-color: rgba(0, 86, 137, 0.9); }
+
+/*Sharing*/
+.sharing {
+  margin: 0 0 12px;
+  list-style: none;
+  font-size: 0; }
+  .sharing .social__icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    position: relative;
+    -webkit-border-radius: 62.5rem;
+    border-radius: 62.5rem;
+    margin-right: 5px; }
+    .sharing .social__icon path {
+      fill: #fff; }
+
+.social__icon--facebook {
+  background-color: #3067A3; }
+  .social__icon--facebook:hover {
+    background-color: #29588b; }
+
+.social__icon--twitter {
+  background-color: #03b3ee; }
+  .social__icon--twitter:hover {
+    background-color: #039cd0; }
+
+.social__icon--email {
+  background-color: #767676; }
+  .social__icon--email:hover {
+    background-color: #676767; }
+
+.social__icon--linkedin {
+  background-color: #0071a1; }
+  .social__icon--linkedin:hover {
+    background-color: #005c82; }
+
+.social__icon--gplus {
+  background-color: #e15440; }
+  .social__icon--gplus:hover {
+    background-color: #dd3c26; }

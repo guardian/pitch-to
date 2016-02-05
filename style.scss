@@ -36,7 +36,7 @@ header {
 		margin-top: $gs-baseline/2;
 	}
 
-	@media screen and (max-width: 480px) {
+	@media (max-width: 480px) {
 		height: $gs-row-height * 1.5;
 
 		img {
@@ -68,7 +68,7 @@ footer{
 		line-height: $gs-baseline * 4;
 	}
 
-	@media screen and (max-width: 480px) {
+	@media (max-width: 480px) {
 		img {
 			display: none;
 		}
@@ -81,15 +81,15 @@ footer{
 	margin: 0 auto;
 	padding: 0 $gs-gutter;
 
-	@media screen and (max-width: 1000px) {
+	@media (max-width: 1000px) {
 		width: gs-span(10);
 	}
 
-	@media screen and (max-width: 860px) {
+	@media (max-width: 860px) {
 		width: gs-span(8);
 	}
 
-	@media screen and (max-width: 680px) {
+	@media (max-width: 680px) {
 		width: inherit;
 		padding: 0 $gs-gutter/2;
 	}
@@ -100,7 +100,7 @@ footer{
 	margin: 0 auto;
 	overflow: auto;
 
-	@media screen and (max-width: 680px) {
+	@media (max-width: 680px) {
 		width: inherit;
 	}
 }
@@ -124,7 +124,7 @@ footer{
 	h2 {
 		font-family: "Guardian Egyptian Headline", Georgia,serif;
 		font-size: 34px;
-    	line-height: 40px;
+    	line-height: 1.2em;
 		font-weight: 200;
 		position: relative;
 
@@ -135,6 +135,15 @@ footer{
 			width: $gs-column-width * 3;
 			height: 2px;
 			background-color: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	@media (max-width: 480px) {
+		h1 {
+			font-size: 54px;
+		}
+		h2 {
+			font-size: 26px;
 		}
 	}
 
@@ -180,11 +189,6 @@ footer{
 			margin-bottom: -2px;
 		}
 	}
-
-	p.description {
-		font-size: 18px;
-		line-height: 1.5em;
-	}
 }
 
 /*Details*/
@@ -204,6 +208,11 @@ footer{
 	.column {
 		width: $gs-column-width * 5;
 		float: left;
+
+		@media (max-width: 680px) {
+ 			width: auto;
+			margin-bottom: $gs-baseline;
+		}
 
 		&:first-of-type {
 			margin-right: $gs-gutter;
@@ -256,6 +265,10 @@ p{
 	line-height: 1.5em;
 	font-family: "Guardian Egyptian Text", Georgia,serif;
 
+	@media (max-width: 680px) {
+		font-size: 16px;
+	}
+
 	strong {
 		font-weight: 500;
 	}
@@ -270,5 +283,68 @@ p{
 		&:hover {
 			border-color: rgba($guardian-brand,0.9);
 		}
+	}
+}
+
+/*Sharing*/
+
+.sharing {
+	margin: 0 0 $gs-baseline;
+	list-style: none;
+	font-size: 0;
+
+	.social__icon {
+	    display: inline-block;
+	    width: 32px;
+		height: 32px;
+		vertical-align: middle;
+		position: relative;
+		-webkit-border-radius: 62.5rem;
+		border-radius: 62.5rem;
+		margin-right: $gs-gutter/4;
+
+		path {
+			fill: #fff;
+		}
+	}
+}
+
+.social__icon--facebook {
+	background-color: #3067A3;
+
+	&:hover {
+		background-color: darken(#3067A3, 6%);
+	}
+}
+
+.social__icon--twitter {
+	background-color: #03b3ee;
+
+	&:hover {
+		background-color: darken(#03b3ee, 6%);
+	}
+}
+
+.social__icon--email {
+	background-color: #767676;
+
+	&:hover {
+		background-color: darken(#767676, 6%);
+	}
+}
+
+.social__icon--linkedin {
+	background-color: #0071a1;
+
+	&:hover {
+		background-color: darken(#0071a1, 6%);
+	}
+}
+
+.social__icon--gplus {
+	background-color: #e15440;
+
+	&:hover {
+		background-color: darken(#e15440, 6%);
 	}
 }
