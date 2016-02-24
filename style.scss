@@ -113,7 +113,7 @@ footer{
 
 	.wrapper{
 		background: #197CAA;
-		padding-bottom: $gs-baseline * 6;
+		padding-bottom: $gs-baseline * 8;
 	}
 
 	h1{
@@ -180,7 +180,7 @@ footer{
 		}
 
 		&:first-child {
-			margin-top: -$gs-baseline * 8;
+			margin-top: -$gs-baseline * 11;
 
 			&:before {
 				color: #fff;

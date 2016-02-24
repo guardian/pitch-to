@@ -247,7 +247,7 @@ footer {
   background: #1878a5; }
   #intro .wrapper {
     background: #197CAA;
-    padding-bottom: 72px; }
+    padding-bottom: 96px; }
   #intro h1 {
     font-family: "Guardian Egyptian Headline", Georgia,serif;
     font-size: 92px;
@@ -289,7 +289,7 @@ footer {
     display: block;
     margin: 24px 0 12px; }
   #events .events_container .event_wrapper:first-child {
-    margin-top: -96px; }
+    margin-top: -132px; }
     #events .events_container .event_wrapper:first-child:before {
       color: #fff; }
 
