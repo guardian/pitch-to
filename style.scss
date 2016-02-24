@@ -7,6 +7,7 @@ $guardian-brand: guss-colour(guardian-brand, $pasteup-palette);
 $event-yellow: guss-colour(multimedia-main-2, $pasteup-palette);
 $neutral-1: guss-colour(neutral-1, $pasteup-palette);
 $neutral-2: guss-colour(neutral-2, $pasteup-palette);
+$neutral-3: guss-colour(neutral-3, $pasteup-palette);
 $neutral-5: guss-colour(neutral-5, $pasteup-palette);
 $neutral-6: guss-colour(neutral-6, $pasteup-palette);
 $neutral-7: guss-colour(neutral-7, $pasteup-palette);
@@ -98,7 +99,6 @@ footer{
 .container {
 	width: 620px;
 	margin: 0 auto;
-	overflow: auto;
 
 	@media (max-width: 680px) {
 		width: inherit;
@@ -113,6 +113,7 @@ footer{
 
 	.wrapper{
 		background: #197CAA;
+		padding-bottom: $gs-baseline * 6;
 	}
 
 	h1{
@@ -127,6 +128,7 @@ footer{
     	line-height: 1.2em;
 		font-weight: 200;
 		position: relative;
+		padding-bottom: $gs-baseline * 3;
 
 		&:after {
 			content: "";
@@ -149,6 +151,10 @@ footer{
 
 	p{
 		padding: 0 0 $gs-baseline * 3 0;
+
+		&:last-of-type {
+			padding-bottom: $gs-baseline;
+		}
 	}
 }
 
@@ -165,14 +171,31 @@ footer{
 	.container {
 		padding: $gs-baseline 0 $gs-baseline * 2;
 	}
+
+	.events_container .event_wrapper {
+		&:before {
+			font-size: 18px;
+			display: block;
+			margin: $gs-baseline * 2 0  $gs-baseline;
+		}
+
+		&:first-child {
+			margin-top: -$gs-baseline * 8;
+
+			&:before {
+				color: #fff;
+			}
+		}
+	}
 }
 
 .event {
 	border-top: solid 2px $event-yellow;
 	background: #fff;
-	padding: $gs-baseline $gs-gutter/2 $gs-baseline * 4;
+	padding: $gs-baseline/2 $gs-gutter/2 $gs-baseline * 4;
 	margin-bottom: $gs-baseline;
 	position: relative;
+	z-index: 1;
 
 	h2{
 		font-family: "Guardian Egyptian Headline", Georgia,serif;
@@ -185,8 +208,47 @@ footer{
 		color: $neutral-2;
 		margin-bottom: $gs-baseline;
 
-		svg {
-			margin-bottom: -2px;
+		&:before {
+			content: url(images/clock.svg);
+			bottom: -2px;
+			margin-right: 3px;
+			position: relative;
+		}
+	}
+}
+
+#first__On:before {
+	content: "Upcoming Elevate Days";
+}
+
+#first__Off:before {
+	content: "Previous Elevate Days";
+}
+
+/*Past event inactive state*/
+.status__Off {
+	.event {
+		border-top-color: $neutral-3;
+
+		.button--event {
+			color: $neutral-3;
+			background-color: $neutral-6;
+
+			svg path {
+				fill: $neutral-3;
+			}
+
+			&:hover {
+				background-color: $neutral-6;
+			}
+
+			&:before {
+				content: "Closed";
+			}
+
+			&:after {
+				content: none;
+			}
 		}
 	}
 }
@@ -203,6 +265,7 @@ footer{
 
 	.container {
 		padding: $gs-baseline 0 $gs-baseline * 4 0;
+		overflow: auto;
 	}
 
 	.column {
@@ -225,6 +288,9 @@ footer{
 .button {
 	font-family: "Guardian Agate Sans", Helvetica,Arial,"Lucida Grande",sans-serif;
 	display: inline-block;
+	font-size: 16px;
+	height: 35px;
+	line-height: 37px;
     vertical-align: top;
     width: auto;
     text-decoration: none;
@@ -234,27 +300,45 @@ footer{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 $gs-gutter/2 0 $gs-gutter;
+    padding: 0 $gs-gutter/1.5;
     margin-right: 0.625rem;
-}
-
-.button--register{
-	position: absolute;
-	bottom: $gs-baseline / 2;
-	right: 0;
-	font-size: 16px;
-	height: 35px;
-	line-height: 35px;
-    color: $neutral-1;
-    background-color: $event-yellow;
-
-	&:hover {
-		background-color: darken($event-yellow, 6%);
-	}
 
 	svg {
 		display: inline-block;
 		margin: 0 0 -6px $gs-gutter/3;
+	}
+}
+
+.button--intro{
+    color: $neutral-1;
+    background-color: $event-yellow;
+	margin-bottom: $gs-baseline * 3;
+
+	&:hover {
+		background-color: darken($event-yellow, 6%);
+	}
+}
+
+.button--event{
+	position: absolute;
+	bottom: $gs-baseline / 2;
+	right: 0;
+    color: $neutral-1;
+    background-color: $event-yellow;
+
+	&::before {
+		content: "Submit";
+	}
+
+	&:after {
+		content: url(images/arrow-right.svg);
+		bottom: -$gs-baseline / 2;
+		margin-left: $gs-gutter / 4;
+		position: relative;
+	}
+
+	&:hover {
+		background-color: darken($event-yellow, 6%);
 	}
 }
 

@@ -236,8 +236,7 @@ footer {
 
 .container {
   width: 620px;
-  margin: 0 auto;
-  overflow: auto; }
+  margin: 0 auto; }
   @media (max-width: 680px) {
     .container {
       width: inherit; } }
@@ -247,7 +246,8 @@ footer {
   color: #fff;
   background: #1878a5; }
   #intro .wrapper {
-    background: #197CAA; }
+    background: #197CAA;
+    padding-bottom: 72px; }
   #intro h1 {
     font-family: "Guardian Egyptian Headline", Georgia,serif;
     font-size: 92px;
@@ -257,7 +257,8 @@ footer {
     font-size: 34px;
     line-height: 1.2em;
     font-weight: 200;
-    position: relative; }
+    position: relative;
+    padding-bottom: 36px; }
     #intro h2:after {
       content: "";
       position: absolute;
@@ -272,6 +273,8 @@ footer {
       font-size: 26px; } }
   #intro p {
     padding: 0 0 36px 0; }
+    #intro p:last-of-type {
+      padding-bottom: 12px; }
 
 /*Events*/
 #events {
@@ -281,13 +284,22 @@ footer {
     background: #f1f1f1; }
   #events .container {
     padding: 12px 0 24px; }
+  #events .events_container .event_wrapper:before {
+    font-size: 18px;
+    display: block;
+    margin: 24px 0 12px; }
+  #events .events_container .event_wrapper:first-child {
+    margin-top: -96px; }
+    #events .events_container .event_wrapper:first-child:before {
+      color: #fff; }
 
 .event {
   border-top: solid 2px #ffbb00;
   background: #fff;
-  padding: 12px 10px 48px;
+  padding: 6px 10px 48px;
   margin-bottom: 12px;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   .event h2 {
     font-family: "Guardian Egyptian Headline", Georgia,serif;
     font-size: 32px; }
@@ -296,8 +308,32 @@ footer {
     font-size: 14px;
     color: #767676;
     margin-bottom: 12px; }
-    .event .time svg {
-      margin-bottom: -2px; }
+    .event .time:before {
+      content: url(images/clock.svg);
+      bottom: -2px;
+      margin-right: 3px;
+      position: relative; }
+
+#first__On:before {
+  content: "Upcoming Elevate Days"; }
+
+#first__Off:before {
+  content: "Previous Elevate Days"; }
+
+/*Past event inactive state*/
+.status__Off .event {
+  border-top-color: #bdbdbd; }
+  .status__Off .event .button--event {
+    color: #bdbdbd;
+    background-color: #eaeaea; }
+    .status__Off .event .button--event svg path {
+      fill: #bdbdbd; }
+    .status__Off .event .button--event:hover {
+      background-color: #eaeaea; }
+    .status__Off .event .button--event:before {
+      content: "Closed"; }
+    .status__Off .event .button--event:after {
+      content: none; }
 
 /*Details*/
 #details {
@@ -306,7 +342,8 @@ footer {
   #details .wrapper {
     background: #eaeaea; }
   #details .container {
-    padding: 12px 0 48px 0; }
+    padding: 12px 0 48px 0;
+    overflow: auto; }
   #details .column {
     width: 300px;
     float: left; }
@@ -321,6 +358,9 @@ footer {
 .button {
   font-family: "Guardian Agate Sans", Helvetica,Arial,"Lucida Grande",sans-serif;
   display: inline-block;
+  font-size: 16px;
+  height: 35px;
+  line-height: 37px;
   vertical-align: top;
   width: auto;
   text-decoration: none;
@@ -330,23 +370,34 @@ footer {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 10px 0 20px;
+  padding: 0 13.33333px;
   margin-right: 0.625rem; }
+  .button svg {
+    display: inline-block;
+    margin: 0 0 -6px 6.66667px; }
 
-.button--register {
+.button--intro {
+  color: #333333;
+  background-color: #ffbb00;
+  margin-bottom: 36px; }
+  .button--intro:hover {
+    background-color: #e0a500; }
+
+.button--event {
   position: absolute;
   bottom: 6px;
   right: 0;
-  font-size: 16px;
-  height: 35px;
-  line-height: 35px;
   color: #333333;
   background-color: #ffbb00; }
-  .button--register:hover {
+  .button--event::before {
+    content: "Submit"; }
+  .button--event:after {
+    content: url(images/arrow-right.svg);
+    bottom: -6px;
+    margin-left: 5px;
+    position: relative; }
+  .button--event:hover {
     background-color: #e0a500; }
-  .button--register svg {
-    display: inline-block;
-    margin: 0 0 -6px 6.66667px; }
 
 /*Paragraphs*/
 p {
